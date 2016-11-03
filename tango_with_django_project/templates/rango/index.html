@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<!--02_02.html
+creating grids -->
+<!DOCTYPE html>
+
+{# Load the tag library #}
+{% load bootstrap3 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+
+</form>
+
+<html>
+	<head>
+		<title>
+			Rango
+		</title>
+		{% include "rango/navbar.html" %}
+	</head>
+	<body>
+		<div>
+		<div class="jumbotron" id="#top">
+			<p><img src={% static "images/2site/2.jpg" %} class="center-block img-responsive img-rounded" ></p>
+			<p align="center"><font size="50" class="text-center" color="white">Rango Says......</font></p>
+			<p align="center"><img src={% static "images/2site/line.jpg" %}></p>
+			<p align="center"><font size="5" class="text-center" color="white">Hey there partner</font></p>
+		</div>
+
+	</div >
+	<div class="jumbotron">
+		<div align="center"><font size ="10" color="white">  RANGOED</font></div>
+		<p align="center"><img src={% static "images/2site/line.jpg" %}></p><br/>
+		<div class="container">
+			<div class="col-lg-6">
+				<div class="container">
+					 <font size="7"><u>Rangoed categories</u></font><br/><br/>
+						<div>
+							{% if categories %}
+							<ul>
+								{% for category in categories %}
+									<li><font size ="4" color="#2C3E50"> <a class=" " href="rango/category/{{ category.slug }}">{{ category.name }}</a></font </li>
+								{% endfor %}
+							</ul>
+							{% else %}
+								<strong>There are no categories present. </strong>
+							{% endif %}	
+						</div>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="container">
+					<font size="7"><u>Most visited Pages</u></font><br/><br/>
+					<div>
+						{% if pages %}
+							<ul>
+								{% for page in pages %}
+									<li><font size ="4" color="#2C3E50"><a href="{{ page.url }}">{{ page.title }}</a></font></li>
+								{% endfor %}
+							</ul>
+						{% else %}
+							<strong> There are no pages present </strong>
+						{% endif%}
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4 col-xs-12">
+				<p align="center"><img src={% static "images/2site/p3.jpg" %} alt="" class="img-responsive btn btn-default"></p>
+			</div>
+			<div class="col-sm-4 col-xs-12">
+				<p align="center"><img src={% static "images/2site/p4.jpg" %} alt="" class="img-responsive btn btn-default"></p>
+			</div>
+			<div class="col-sm-4 col-xs-12">
+				<p align="center"><img src={% static "images/2site/p5.jpg" %} alt="" class="img-responsive btn btn-default"></p>
+			</div>
+		</div>
+	</div><br/>
+
+
+	<div class="container" id="#contact">
+		<div class="row">
+			<div class="col-lg-12">
+				<p align="center"><font size="50">Contact Us</font></p>
+				<p align="center"><img src={% static "images/2site/line2.jpg" %}></p>
+
+			</div>
+		</div>
+		
+			<div class="row ">
+				<p align="center"><input type="text" name="firstname" placeholder="Name" class="form-control input-lg"></p>
+			</div>
+			<div class="row">
+				<p align="center"><input type="text" name="firstname" placeholder="Email Address" class="form-control input-lg"></p>
+			</div>
+			<div class="row">
+				<p align="center"><input type="text" name="firstname" placeholder="Phone Number" class="form-control input-lg"></p>
+			</div>
+			<div class="row">
+				<p align="center"><input type="text" name="firstname" placeholder="Message" class="form-control input-lg"></p>
+			</div>
+			<br/>
+			<p align="center"><a href="#" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-send"></span>  SEND</a></p>
+			<br>
+			<br>
+	</div>
+
+	<footer class="text-center">
+			<div class="footer-above">
+				<div class="container">
+					<div class="row">
+						<div class="footer-col col-md-4">
+							<br>
+							<br>
+							<h3><b><u>LOCATION</u></b></h3><br/>
+							<p>3481 Melrose Place <br/>Beverly Hills, CA 90210</p>
+						</div>
+						<div class="footer-col col-md-4">
+							<br>
+							<br>
+							<h3><b><u>ABOUT the Web</u></b></h3><br/>
+							<ul class="list-inline">
+								<li>
+									<a href="www.facebook.com" class="btn btn-rounded"><img src={% static "images/2site/f.jpg" %}></a>
+								</li>
+								<li>
+									<a href="www.google+.com" class="btn btn-rounded"><img src={% static "images/2site/g.jpg" %}></a>
+								</li>
+								<li>
+									<a href="www.twitter.com" class="btn btn-rounded"><img src={% static "images/2site/t.jpg" %}></a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer-col col-md-4">
+							<br>
+							<br>
+							<h3><b><u>ABOUT FREELANCER</u></b></h3><br/>
+							<p>Freelance is a free to use, open source Bootstrap theme created by<a href="www.djangoofficeialdocumentaion.com"> Start Bootstrap</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-below">
+				<div class= "container">
+					<div class="row">
+						<div class="col-lg-12"><br/>
+							Copyright © Your Website 2016
+							<br/><br/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div>
+</body>
+</html>

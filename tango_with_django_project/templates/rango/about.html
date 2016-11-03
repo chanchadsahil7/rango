@@ -1,0 +1,59 @@
+{% load staticfiles %}
+
+
+<html>
+	<head>
+		<title>
+			About
+		</title>
+		{% include "rango/navbar.html" %}
+	</head>
+	<body>
+		<footer class="text-center">
+			<div class="footer-above">
+				<div class="container">
+					<div class="row">
+						<div class="footer-col col-md-4">
+							<br>
+							<br>
+							<h3><b><u>LOCATION</u></b></h3><br/>
+							<p>3481 Melrose Place <br/>Beverly Hills, CA 90210</p>
+						</div>
+						<div class="footer-col col-md-4">
+							<br>
+							<br>
+							<h3><b><u>ABOUT the Web</u></b></h3><br/>
+							<ul class="list-inline">
+								<li>
+									<a href="www.facebook.com" class="btn btn-rounded"><img src={% static "images/2site/f.jpg" %}></a>
+								</li>
+								<li>
+									<a href="www.google+.com" class="btn btn-rounded"><img src={% static "images/2site/g.jpg" %}></a>
+								</li>
+								<li>
+									<a href="www.twitter.com" class="btn btn-rounded"><img src={% static "images/2site/t.jpg" %}></a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer-col col-md-4">
+							<br>
+							<br>
+							<h3><b><u>ABOUT FREELANCER</u></b></h3><br/>
+							<p>Freelance is a free to use, open source Bootstrap theme created by<a href="www.djangoofficeialdocumentaion.com"> Start Bootstrap</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-below">
+				<div class= "container">
+					<div class="row">
+						<div class="col-lg-12"><br/>
+							Copyright © Your Website 2016
+							<br/><br/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

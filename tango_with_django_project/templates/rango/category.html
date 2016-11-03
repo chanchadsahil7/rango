@@ -1,0 +1,32 @@
+{% load staticfiles %}
+<html>
+	<head>
+		<title>
+			Rango
+		</title>
+	</head>
+	{% include "rango/navbar.html" %}
+	<body>
+	<div class="jumbotron ">
+
+		<div  class="container ">
+			<div class="col-md-4">
+			<h3>CATEGORIES</h3>
+			{% if category %}
+				<ul>
+					{% for cat in category %}
+						<li> {{ cat.name }}</li>
+					{% endfor %}
+				</ul>
+			{% else %}
+				The specified category does not exist!
+			{% endif %}
+			</div>
+		
+		<div class="col-md-8">
+		<img src={% static "images/1.jpg" %} alt="" class="img-responsive img-rounded">
+		</div>
+		</div
+	</div>
+	</body>
+</html
