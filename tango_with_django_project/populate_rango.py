@@ -67,6 +67,9 @@ def populate():
 		for p in Page.objects.filter(category=c):
 			print("- {0} - {1}".format(str(c), str(p)))
 
+
 if __name__ == '__main__':
 	print("Startig Rango population script....")
 	populate()
+
+
